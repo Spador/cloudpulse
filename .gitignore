@@ -1,0 +1,50 @@
+# Environment & secrets
+.env
+credentials.json
+token.json
+
+# Intermediates (always regenerable)
+.tmp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Node / Frontend
+node_modules/
+.next/
+out/
+frontend/dist/
+frontend/.env
+*.tsbuildinfo
+
+# Terraform
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.backup
+infra/.terraform.lock.hcl
+infra/tfplan
+infra/terraform.tfvars
+
+# Lambda packaging
+*.zip
+lambda_package/
+
+# Test coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# macOS / Editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
