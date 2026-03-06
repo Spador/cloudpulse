@@ -1,0 +1,34 @@
+{
+  "ec2": {
+    "total": 5,
+    "by_state": { "running": 3, "stopped": 2, "terminated": 0 },
+    "instances": [
+      { "id": "i-0abc123def456001", "type": "t3.medium", "state": "running", "region": "us-east-1", "name": "web-01" },
+      { "id": "i-0abc123def456002", "type": "t3.large", "state": "running", "region": "us-east-1", "name": "api-01" },
+      { "id": "i-0abc123def456003", "type": "m5.xlarge", "state": "running", "region": "us-east-1", "name": "worker-01" },
+      { "id": "i-0abc123def456004", "type": "t2.micro", "state": "stopped", "region": "us-west-2", "name": "dev-bastion" },
+      { "id": "i-0abc123def456005", "type": "t3.small", "state": "stopped", "region": "eu-west-1", "name": "staging-web" }
+    ]
+  },
+  "s3": {
+    "total_buckets": 4,
+    "buckets": [
+      { "name": "my-app-assets-prod", "region": "us-east-1", "creation_date": "2023-06-01T00:00:00+00:00" },
+      { "name": "cloudpulse-tf-state", "region": "us-east-1", "creation_date": "2024-01-10T00:00:00+00:00" },
+      { "name": "my-app-backups", "region": "us-west-2", "creation_date": "2023-09-15T00:00:00+00:00" },
+      { "name": "cf-logs-bucket", "region": "us-east-1", "creation_date": "2023-11-20T00:00:00+00:00" }
+    ]
+  },
+  "lambda": {
+    "total_functions": 8,
+    "functions": [
+      { "name": "cloudpulse-poller", "runtime": "python3.11", "region": "us-east-1", "last_modified": "2024-03-01T10:00:00.000+0000" },
+      { "name": "image-resizer", "runtime": "nodejs20.x", "region": "us-east-1", "last_modified": "2024-02-15T14:30:00.000+0000" },
+      { "name": "email-sender", "runtime": "python3.11", "region": "us-east-1", "last_modified": "2024-01-20T09:15:00.000+0000" },
+      { "name": "data-processor", "runtime": "python3.11", "region": "us-east-1", "last_modified": "2024-02-28T16:45:00.000+0000" },
+      { "name": "auth-validator", "runtime": "nodejs20.x", "region": "us-east-1", "last_modified": "2024-03-02T11:00:00.000+0000" }
+    ]
+  },
+  "source": "mock",
+  "fetched_at": "2024-03-05T12:00:00Z"
+}
