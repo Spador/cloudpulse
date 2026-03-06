@@ -1,0 +1,35 @@
+{
+  "anomalies": [
+    {
+      "service": "Amazon EC2",
+      "date": "2024-03-04",
+      "previous_cost": 10.00,
+      "current_cost": 23.00,
+      "pct_change": 130.0,
+      "severity": "critical",
+      "currency": "USD"
+    },
+    {
+      "service": "Amazon RDS",
+      "date": "2024-03-03",
+      "previous_cost": 8.00,
+      "current_cost": 13.20,
+      "pct_change": 65.0,
+      "severity": "high",
+      "currency": "USD"
+    },
+    {
+      "service": "Amazon S3",
+      "date": "2024-03-02",
+      "previous_cost": 1.00,
+      "current_cost": 1.30,
+      "pct_change": 30.0,
+      "severity": "medium",
+      "currency": "USD"
+    }
+  ],
+  "threshold_used": 0.20,
+  "period_scanned": { "start": "2024-02-27", "end": "2024-03-05" },
+  "total_anomalies": 3,
+  "source": "mock"
+}

@@ -1,0 +1,59 @@
+{
+  "period": { "start": "2024-02-04", "end": "2024-03-05" },
+  "daily": [
+    {
+      "date": "2024-02-04",
+      "services": [
+        { "service": "Amazon EC2", "cost": 12.34, "currency": "USD" },
+        { "service": "Amazon S3", "cost": 1.02, "currency": "USD" },
+        { "service": "AWS Lambda", "cost": 0.12, "currency": "USD" },
+        { "service": "Amazon RDS", "cost": 8.50, "currency": "USD" },
+        { "service": "Amazon CloudFront", "cost": 0.45, "currency": "USD" }
+      ],
+      "total": 22.43
+    },
+    {
+      "date": "2024-02-05",
+      "services": [
+        { "service": "Amazon EC2", "cost": 12.80, "currency": "USD" },
+        { "service": "Amazon S3", "cost": 1.05, "currency": "USD" },
+        { "service": "AWS Lambda", "cost": 0.14, "currency": "USD" },
+        { "service": "Amazon RDS", "cost": 8.50, "currency": "USD" },
+        { "service": "Amazon CloudFront", "cost": 0.42, "currency": "USD" }
+      ],
+      "total": 22.91
+    },
+    {
+      "date": "2024-03-04",
+      "services": [
+        { "service": "Amazon EC2", "cost": 23.00, "currency": "USD" },
+        { "service": "Amazon S3", "cost": 1.30, "currency": "USD" },
+        { "service": "AWS Lambda", "cost": 0.13, "currency": "USD" },
+        { "service": "Amazon RDS", "cost": 13.20, "currency": "USD" },
+        { "service": "Amazon CloudFront", "cost": 0.45, "currency": "USD" }
+      ],
+      "total": 38.08
+    },
+    {
+      "date": "2024-03-05",
+      "services": [
+        { "service": "Amazon EC2", "cost": 12.50, "currency": "USD" },
+        { "service": "Amazon S3", "cost": 1.10, "currency": "USD" },
+        { "service": "AWS Lambda", "cost": 0.15, "currency": "USD" },
+        { "service": "Amazon RDS", "cost": 8.50, "currency": "USD" },
+        { "service": "Amazon CloudFront", "cost": 0.44, "currency": "USD" }
+      ],
+      "total": 22.69
+    }
+  ],
+  "monthly_summary": [
+    { "service": "Amazon EC2", "total_cost": 320.45, "currency": "USD" },
+    { "service": "Amazon RDS", "total_cost": 255.00, "currency": "USD" },
+    { "service": "Amazon S3", "total_cost": 28.10, "currency": "USD" },
+    { "service": "Amazon CloudFront", "total_cost": 13.50, "currency": "USD" },
+    { "service": "AWS Lambda", "total_cost": 3.60, "currency": "USD" }
+  ],
+  "grand_total": 620.65,
+  "currency": "USD",
+  "source": "mock"
+}
