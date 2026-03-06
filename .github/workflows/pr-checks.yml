@@ -1,0 +1,74 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  python-checks:
+    name: Python Lint + Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('backend/requirements-dev.txt') }}
+          restore-keys: pip-
+
+      - name: Install Python dependencies
+        run: pip install -r backend/requirements-dev.txt
+
+      - name: Lint with flake8
+        run: |
+          flake8 backend/ execution/ \
+            --max-line-length=100 \
+            --exclude=__pycache__,.venv \
+            --ignore=E203,W503
+
+      - name: Run pytest
+        env:
+          MOCK_MODE: "true"
+          AWS_DEFAULT_REGION: "us-east-1"
+          AWS_ACCESS_KEY_ID: "testing"
+          AWS_SECRET_ACCESS_KEY: "testing"
+          DYNAMODB_TABLE_NAME: "cloudpulse-costs-test"
+        run: |
+          cd backend
+          pytest tests/ -v --tb=short --cov=. --cov-report=term-missing
+
+  frontend-checks:
+    name: Frontend Lint + Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install npm dependencies
+        run: npm ci
+        working-directory: frontend
+
+      - name: Lint with ESLint
+        run: npm run lint
+        working-directory: frontend
+
+      - name: Run Jest tests
+        run: npm test -- --watchAll=false --passWithNoTests
+        working-directory: frontend
