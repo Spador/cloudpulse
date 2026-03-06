@@ -1,0 +1,25 @@
+# CloudPulse — Terraform Variables
+# Copy this file to terraform.tfvars and fill in your values.
+# terraform.tfvars is gitignored — never commit it.
+
+# AWS region to deploy into
+aws_region = "us-east-1"
+
+# Application name prefix (used for all resource names)
+app_name = "cloudpulse"
+
+# Deployment environment
+# Valid values: "dev", "staging", "production"
+environment = "production"
+
+# Days before DynamoDB cost records expire (30–365)
+dynamodb_ttl_days = 90
+
+# Lambda CloudWatch log retention in days
+lambda_log_retention_days = 30
+
+# Days back the Lambda poller fetches from Cost Explorer
+cost_snapshot_days = 90
+
+# Fractional spike threshold for anomaly detection (20% = 0.20)
+anomaly_threshold = "0.20"
