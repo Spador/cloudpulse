@@ -2,7 +2,7 @@
 
 **Open-source AWS cost and resource monitoring — self-hosted, no SaaS fees.**
 
-[![CI](https://github.com/YOUR_USERNAME/cloudpulse/actions/workflows/pr-checks.yml/badge.svg)](https://github.com/YOUR_USERNAME/cloudpulse/actions/workflows/pr-checks.yml)
+[![CI](https://github.com/Spador/cloudpulse/actions/workflows/pr-checks.yml/badge.svg)](https://github.com/Spador/cloudpulse/actions/workflows/pr-checks.yml)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
 [![Terraform 1.7+](https://img.shields.io/badge/terraform-1.7+-7B42BC.svg)](https://www.terraform.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
