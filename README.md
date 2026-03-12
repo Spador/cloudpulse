@@ -126,7 +126,7 @@ Run the app in under 5 minutes without any AWS account:
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/cloudpulse.git
+git clone https://github.com/Spador/cloudpulse.git
 cd cloudpulse
 
 # 2. Start the backend in mock mode
